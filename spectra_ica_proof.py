@@ -10,7 +10,7 @@ Reports:
   - Per-subject balanced accuracy table
   - Wilcoxon signed-rank test + Cohen's d for significance
 """
-import warnings, time
+import sys, warnings, time
 import numpy as np
 warnings.filterwarnings('ignore')
 
@@ -103,6 +103,15 @@ def cohens_d(a, b):
 
 
 if __name__ == "__main__":
+    expected_caches = [CACHE_DIR / f"p300_{prep}_epochs.npz" for prep in ('ica', 'spectra_ica')]
+    missing = [str(p) for p in expected_caches if not p.exists()]
+    if missing:
+        print("\nBenchmark data not found.")
+        print(f"Missing file(s): {', '.join(missing)}")
+        print(f"This benchmark reads prebuilt epoch caches from {CACHE_DIR}/. "
+              "Place the P300 epoch cache files there and re-run.")
+        sys.exit(0)
+
     t0 = time.time()
 
     print("=" * 72)
