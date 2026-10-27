@@ -1,0 +1,8 @@
+# Runtime dependencies (icas.py)
+numpy
+scipy
+mne
+mne-icalabel
+
+# Benchmark only (spectra_ica_proof.py)
+scikit-learn
