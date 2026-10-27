@@ -95,4 +95,4 @@ Built at SURGE NeuroHack 2026 by Anand Lo, Het Jivani, Nafisah Nubah, Rafat Hoss
 
 ## License
 
-This project was developed for NeuroHack 2026 by Team Surge. The code is published here for review. A formal license will be chosen by the team and added here.
+MIT, held jointly by Team Surge (Anand Lo, Het Jivani, Nafisah Nubah, Rafat Hossain, Milad Alipour). See [LICENSE](LICENSE).
