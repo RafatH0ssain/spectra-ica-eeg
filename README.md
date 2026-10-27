@@ -71,7 +71,7 @@ cleaned, info = spectra_clean(raw, ica)
 - `icas.py`: the SPECTRA-ICA implementation. `spectra_clean(raw, ica)` takes a raw recording and a fitted ICA solution, and returns the cleaned raw plus a diagnostics dictionary.
 - `spectra_ica_proof.py`: the P300 benchmark script (standard ICA vs SPECTRA-ICA, Leave-One-Person-Out CV).
 - `report.md`: full writeup with per-subject results and limitations.
-- `SURGE NeuroHack.pdf`: team slides (the filename contains a space).
+- `surge-neurohack-2026-slides.pdf`: team slides.
 - `requirements.txt`: Python dependencies.
 
 ## Methods
@@ -81,6 +81,10 @@ cleaned, info = spectra_clean(raw, ica)
 3. **Temporal mask detection**, with type-specific detectors for blink (delta envelope), muscle (HF RMS), cardiac (QRS template correlation), channel noise (broadband RMS)
 4. **Spectral profile estimation**, where a per-IC STFT comparison of artifact vs. clean frames yields a continuous frequency weight F(k)
 5. **Frequency-selective removal**, meaning the artifact IC contribution is attenuated only at frequencies where F(k) > 0, only during detected events, weighted by ICLabel probability
+
+## Team
+
+Built at SURGE NeuroHack 2026 by Anand Lo, Het Jivani, Nafisah Nubah, Rafat Hossain, and Milad Alipour.
 
 ## References
 
